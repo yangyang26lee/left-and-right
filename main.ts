@@ -1,0 +1,10 @@
+basic.forever(function () {
+    pins.digitalWritePin(DigitalPin.P8, 1)
+    music.play(music.tonePlayable(392, music.beat(BeatFraction.Whole)), music.PlaybackMode.InBackground)
+    basic.pause(500)
+    pins.digitalWritePin(DigitalPin.P8, 0)
+    pins.digitalWritePin(DigitalPin.P13, 1)
+    music.play(music.tonePlayable(220, music.beat(BeatFraction.Whole)), music.PlaybackMode.InBackground)
+    basic.pause(500)
+    pins.digitalWritePin(DigitalPin.P13, 0)
+})
